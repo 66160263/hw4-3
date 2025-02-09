@@ -1,45 +1,27 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ระบบจัดการตารางนัดหมาย</title>
-  <style>
-    .cancelled {
-      text-decoration: line-through;
-      color: red;
-    }
-    .conflict {
-      color: orange;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบจัดการตารางนัดหมาย</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>ระบบจัดการตารางนัดหมาย</h1>
+    <div class="container">
+        <h1>ระบบจัดการตารางนัดหมาย</h1>
+        
+        <form id="appointment-form">
+            <input type="text" id="title" placeholder="หัวข้อการนัดหมาย" required>
+            <input type="date" id="date" required>
+            <input type="time" id="startTime" required>
+            <input type="time" id="endTime" required>
+            <button type="submit">เพิ่มนัดหมาย</button>
+        </form>
+        
+        <h2>รายการนัดหมาย</h2>
+        <ul id="appointment-list"></ul>
+    </div>
 
-  <h2>เพิ่มนัดหมาย</h2>
-  <form id="createForm">
-    <label for="title">หัวข้อ:</label>
-    <input type="text" id="title" required><br><br>
-
-    <label for="date">วันที่ (YYYY-MM-DD):</label>
-    <input type="date" id="date" required><br><br>
-
-    <label for="startTime">เวลาเริ่ม (HH:MM):</label>
-    <input type="time" id="startTime" required><br><br>
-
-    <label for="endTime">เวลาสิ้นสุด (HH:MM):</label>
-    <input type="time" id="endTime" required><br><br>
-
-    <button type="submit">บันทึกนัดหมาย</button>
-  </form>
-
-  <h2>นัดหมายล่วงหน้า 1 วัน</h2>
-  <ul id="upcomingAppointments"></ul>
-
-  <h2>รายการนัดหมายทั้งหมด</h2>
-  <ul id="appointmentsList"></ul>
-
-  <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
