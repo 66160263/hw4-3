@@ -1,0 +1,9 @@
+.cancelled {
+    text-decoration: line-through;
+    color: red;
+  }
+  
+  .conflict {
+    color: orange;
+  }
+  
